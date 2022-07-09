@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/重置样式表/reset.css">
+    <style>
+        /* 
+          -浮动元素不会盖住文字，文字会自动环绕在浮动元素的周围，
+              所以我们可以利用浮动来设置文字环绕图片的效果
+          -元素设置浮动以后，将会从文档流中完全脱离，脱离以后，
+              元素的一些特点也会发生改变
+              
+          -脱离文档流的特点：
+               -块元素：
+                    1、块元素不再是独占一行 
+                    2、块元素的宽高都默认被内容撑开  
+               -行内元素：
+                    1、行内元素脱离后就变成了块元素，特点和块元素一样
+               -脱离文档流以后，不再区分行内元素和块元素           
+            
+          */
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            float: left;
+        }
+        .box2{
+            background-color: bisque;
+            float: left;
+        }
+        
+        .box3{
+            background-color: aquamarine;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box2">
+        hello
+    </div>
+    <div class="box3">
+        hello
+    </div>
+    <!-- <div class="box1"></div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil velit ut placeat labore, illo, accusamus inventore recusandae, neque necessitatibus animi ad fuga ipsa unde sint! Maiores incidunt vitae dolorum ea.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, amet. Odit consequuntur porro mollitia laborum eaque blanditiis soluta. Minus ducimus dolore asperiores facere sed magnam. Facere exercitationem eos recusandae nihil!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim aspernatur molestiae iste minus. Blanditiis adipisci repellat, accusantium deleniti, enim sequi, deserunt ipsam recusandae animi incidunt labore quas qui asperiores esse.</p> -->
+</body>
+</html>

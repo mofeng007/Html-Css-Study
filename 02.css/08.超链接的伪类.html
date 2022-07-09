@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        /* 
+          link用来表示没访问过的链接（正常的链接）
+         */
+         a:link{
+           
+            color: red;
+        }
+        /* 
+          visited用来表示访问过的链接
+          由于隐私的原因，所以visited这个伪类只能用来修改链接的颜色
+        */
+        a:visited{
+            font-size: 30px;
+            color: chartreuse;
+        }
+        /* 
+          :hover用来表示鼠标移入的状态
+        */
+        a:hover{
+            color: aqua;
+            font-size: 30px;
+        }
+        /* 
+          :active用来表示鼠标点击
+        */
+        a:active{
+            color: black;
+            font-size: 50px;
+        }
+
+
+     </style>
+</head>
+<body>
+    <!-- 
+        特殊状态：
+        1.没有访问过的连接
+        2.访问过的链接
+     -->
+<!-- 
+
+  我定义的顺序是a:visited、a:hover、a:link，这时候就会发现，不管我有没有hover上去，样式都是link的样式的，这是因为鼠标经过的未访问链接同时拥有a:link、a:hover两种属性，在第一种情况下，a:link离它最近，所以它优先满足a:link，而放弃a:hover的重复定义。 
+ 所以，如果一个链接没有被访问过，那么它有可能同时拥有 link , hover 两个属性，不能让 link 写在后面，否则不管 hover 是否，都会显示link的样式；同样的道理，如果一个链接已经被访问过了，那么它有可能同时拥有visited , hover 两个属性，hover 要在 visited 的后面；
+如果把hover放在active后面，那么实际你在激活（active）链接的时候就触发了hover伪类，hover在后面覆盖了active的颜色，所以始终无法看到active的颜色 。
+其实 link visited 这两个伪类，并不需要顺序关系。（他们两的位置可以交换）
+ 
+所以，我们总结出，要想让一个链接各个阶段都正常呈现样式，正确的顺序是 lvha ;
+ -->
+
+    <a href="https://www.bilibili.com/" target="_blank">访问过的</a><br>
+   
+    <a href="https://www.baidu.com/?tn=15007414_pg" target="_blank">未访问的</a>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易新闻列表</title>
+    <link rel="stylesheet" href="/重置样式表/reset.css">
+    <style>
+        /* 去除文字下划线 */
+        a{
+           text-decoration: none;
+        }
+        /* 设置容器样式 */
+        .news-wrapper{
+            width: 300px;
+            height: 358px;
+            /* 居中 */
+            margin: 50px auto;
+            background-color: #bfa;
+            /* 设置上边框 */
+            border-top:1px black solid ;
+        }
+        /* 设置news-title */
+        .news-title{
+            /* 为了边框和文字一致，需要将h2设置为行内块 */
+            display: inline-block;
+            height: 30px;
+            /* 设置上边框 */
+            border-top:1px solid red;
+            /* 通过margin top将h2上移，盖住上边框 */
+            margin-top: -1px;
+            /* 把标题下移 */
+            padding-top: 10px;
+        }
+        /* 设置title中超链接的样式 */
+        .news-title a{
+            text-decoration: none;
+            color: black;
+            /* 加粗 */
+            font-weight: bold;
+        }
+        /* 指定图片容器高度 否则图片文字上移时，下面的链接也会上移 */
+        .news-img{
+            height: 150px;
+        }
+        /* 设置图片的文字效果 */
+        .news-img .img-title{
+            /* 文字上移 */
+            margin-top: -30px;
+            color: #fff;
+            font-weight: bold;
+            /* 文字居中 */
+            /* padding-left: 100px; */
+            text-align: center;
+        }
+
+        /* 设置新闻列表 */
+        .news-list{
+            /* 设置上外边距 */
+            margin-top: 20px;
+            /* 设置左侧的padding */
+            /* padding-left:24px; */
+            /* 设置项目符号
+            list-style: square; */
+            
+        }
+        /* 设置li */
+        .news-list li{
+            margin-bottom: 17px;
+        }
+
+         /* 通过before伪元素设置项目号 */
+         .news-list li::before{
+            content: "♥";
+            color: rgb(227, 227, 235);
+            font-size: 12px;
+            margin-left: 4px;
+        }
+
+        /* 设置li文字 */
+        .news-list li a{
+            font-size: 14px;
+            color: black;   
+        }
+       
+        .news-list li a:hover{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 创建新闻列表的外部容器 -->
+    <div class="news-wrapper">
+        <!-- 创建一个标题标签 -->
+        <h2 class="news-title">
+            <a href="javascript:;">体育</a>
+        </h2>
+        <!-- 创建一个图片的容器 -->
+        <div class="news-img">
+            <a href="javascript:;">
+                <img src="https://cms-bucket.ws.126.net/2022/0704/9dcf11e8j00regyqr000rc0008c005kc.jpg?imageView&thumbnail=300y150&type=webp">
+                <!-- 创建图片标题 -->
+                <h3 class="img-title">
+                    图片文字
+                </h3>
+            </a>
+        </div>
+        <!-- 新闻列表 -->
+        <ul class="news-list">
+            <li>
+                <a href="javascript:;">一键三连呀【点赞、投币、收藏】</a>
+            </li>
+            <li>
+                <a href="javascript:;">S3的核心技术点。通过对</a>
+            </li>
+            <li>
+                <a href="javascript:;">量的CSS技巧、动画、</a>
+            </li>
+            <li>
+                <a href="javascript:;">并完成大部分静态</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+          颜色单位：
+              -在CSS中可以直接使用颜色名来设置各种颜色
+                   -eg：red，blue......
+                   -但是在CSS中直接使用颜色名是非常的不方便（名字记不住等）
+              -RGB值：（可以用取色器来取，QQ截图也可以）
+                   -RGB通过光的三原色的不同浓度来调配出不同的颜色
+                   -R red，G green，B blue 
+                   -每一种颜色的范围在0~255（0%~100%）之间  
+                   -语法，RGB（红，绿，蓝）;  
+              -RGBA：
+                   -就是在RGB的基础上增加了一个A表示不透明度
+                   -需要四个值，前三个和RGB一样，第四个表示不透明度
+                   -rgba(red, green, blue, alpha);
+                   -1表示完全不透明 ， 0表示完全透明，.5表示半透明
+              -十六进制的RGB值：
+                   -语法，#红绿蓝
+                   -颜色浓度通过00~ff调配
+                   -如果颜色两位两位重复，可以进行简写
+                   -#aabbcc --> #abc  
+              -HSL值，HSLA值
+                   -H 色相（一个圆环 范围：0~360）
+                   -S 饱和度（颜色浓度 0%~100%）
+                   -L 亮度（颜色的亮度 0%~100%）
+                   -A 透明度    
+
+        */
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 255, 255); /* 白色 */
+            background-color: rgb(0, 0, 0); /* 黑色 */
+            background-color: rgb(222,160,137);
+            /* background-color: rgba(red, green, blue, alpha); */
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

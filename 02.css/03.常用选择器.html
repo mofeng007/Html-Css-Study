@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+      /* 
+        一、元素选择器
+           -作用，根据标签名来选中指定的元素
+           -语法，标签名{}
+           -eg，p{}  h2{}  div{}
+
+        二、id选择器
+           -作用，根据元素的id属性值选中一个元素
+           -语法，#id属性值{}
+           -eg，#box{} #red{}  
+
+        三、类选择器
+           -作用，根据元素的class属性值选中一组元素
+           -语法，.class属性值{}
+           -eg，.abc{} .blus{}
+
+        四、通配选择器
+           -作用，选中页面中的所有元素
+           -语法、*   
+      */
+     h1{
+        color: blue;
+
+     }
+
+     #red{
+        color: red;
+     }
+
+     .abc{
+        color: yellow;
+     }
+
+     .blus{
+        font-size: 30px;
+     }
+
+</style>
+
+</head>
+<body>
+<!-- 
+    class是一个标签的属性，它与id相似，不同的是class可以重复使用
+         可以通过class属性来为元素分组
+         可以同时为一个元素指定多个class属性，用空格隔开
+ -->
+
+   <h1>相思</h1>  
+   <h3>作者：王维</h3> 
+    <p id="red">红豆生南国，</p> 
+    <p class="abc blus">春来发几枝。</p>
+    <p class="abc">愿君多采撷，</p>
+    <p>此物最相思。</p> 
+
+
+
+</body>
+</html>

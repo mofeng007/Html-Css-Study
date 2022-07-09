@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+          [属性名]选择含有指定属性的元素
+          [属性名=属性值]选择含有指定属性和属性值的元素
+          [属性名^=属性值]选择属性值以指定值开头的元素的（^ shift加6）
+          [属性名$=属性值]选择属性值以指定值结尾的元素的
+          [属性名*=属性值]选择属性值中含有某值的元素
+
+          p[title]{}
+          p[title=abc]{}
+          p[title^=ab]{}
+          p[title$=c]{}
+          p[title*=c]{}
+ 
+        */
+        p[title*=b]{
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>相思</h1>  
+   <h3>作者：王维</h3> 
+    <p title="abc">红豆生南国，</p> 
+    <p title="bbc">春来发几枝。</p>
+    <p title="abdcd">愿君多采撷，</p>
+    <p>此物最相思。</p> 
+</body>
+</html>
