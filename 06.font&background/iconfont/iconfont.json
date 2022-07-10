@@ -1,0 +1,30 @@
+{
+  "id": "3511850",
+  "name": "Test",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "30028609",
+      "name": "金蛋",
+      "font_class": "iconhuaban1-03",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "30028611",
+      "name": "首页",
+      "font_class": "iconhuaban1-15",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "30028625",
+      "name": "查找",
+      "font_class": "iconhuaban1-19",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    }
+  ]
+}

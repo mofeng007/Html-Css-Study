@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3511850 */
+  src: url('iconfont.woff2?t=1657420105808') format('woff2'),
+       url('iconfont.woff?t=1657420105808') format('woff'),
+       url('iconfont.ttf?t=1657420105808') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconhuaban1-03:before {
+  content: "\e611";
+}
+
+.icon-iconhuaban1-15:before {
+  content: "\e612";
+}
+
+.icon-iconhuaban1-19:before {
+  content: "\e613";
+}
+
