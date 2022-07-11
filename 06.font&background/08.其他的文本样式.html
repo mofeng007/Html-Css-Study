@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+          text-decoration 设置文本修饰
+              可选值：
+                  none 什么都没有（可以用来去除链接的下划线）
+                  underline 下划线
+                  line-through 删除线
+                  overline 上划线
+
+          white-space 设置网页如何处理空白 
+              可选值：
+                  normal 正常
+                  nowrap 不换行
+                  pre 保留空白（网页中写的什么格式就什么格式，多个空格也可以显示）
+
+                  配合 overflow: hidden;text-overflow: ellipsis；可以实现多余内容显示为省略号
+                  
+
+
+
+
+
+
+        */
+        .box1{
+            font-size: 50px;
+            text-decoration: overline;
+        }
+
+        .box2{
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        今天天气真不错
+    </div>
+
+    <div class="box2">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam error perspiciatis minima! Quos dicta magnam vero voluptatum necessitatibus maxime, ipsam rerum error consequuntur iste nulla vitae culpa magni, quidem natus.
+    </div>
+</body>
+</html>

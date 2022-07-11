@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+          text-align 文本的水平对齐
+              可选值：
+                  left 左侧对齐
+                  right 右侧对齐
+                  center 居中对齐
+                  justify 两端对齐
+
+          vertical-align 设置元素垂直对齐的方式  
+              可选值：
+                  baseline 默认值，基线对齐
+                  top 顶部对齐
+                  bottom 底部对齐
+                  middle 居中对齐
+                  也可以直接指定值 eg：vertical-align: 10px;
+
+          图片默认也是基线对齐，会导致图片底下有一个缝，
+                      影响布局，让他不以基线对齐即可改变
+                        
+
+
+        */
+        div{
+            width: 500px;
+            border: 1px red solid;
+            /* text-align: justify; */
+            font-size: 50px;
+        }
+
+        span{
+            font-size: 20px;
+            border: 1px black solid;
+            vertical-align:16px;
+        }
+
+        p{
+            font-size: 20px;
+            border: 1px black solid;
+        }
+
+        img{
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <div>今天天气Helloyx<span>真不错</span></div>
+    <!-- <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel exercitationem atque dignissimos maiores, voluptatibus dicta, repellat aspernatur, consequatur accusantium obcaecati saepe eum officiis incidunt animi delectus dolorem hic perspiciatis perferendis.
+    </div> -->
+    <p>
+        <img src="/Exercise/图片/2.jpg.webp" alt="">
+    </p>
+</body>
+</html>
