@@ -5,8 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* 
+        设置背景图片
+        background-image: url('')
+           -可以同时设置背景图片和背景颜色，这样背景颜色会成为图片的背景色
+           -如果背景的图片小于元素，则背景图片会自动在元素中平铺将元素铺满
+           -如果背景的图片大于元素，将会有部分背景无法完全展示
+           -如果背景图片和元素大小一致，则会直接正常显示
+          
+        background-repeat 用来设置背景的重复方式
+           可选值：
+               -repeat 默认值，背景会沿着X轴，Y轴方向重复 
+               -repeat-x 沿着X轴方向重复 
+               -repeat-y 沿着Y轴方向重复
+               -no-repeat 背景图片不重复
+
+        background-position 用来设置背景图片的位置
+           通过 top left right bottom center 几个表示方向的词来设置图片的位置 
+              使用方位词时必须要同时指定两个值，如果只写一个则第二个默认就是center   
+           通过偏移量来指定背景图片的位置，
+              水平方向的偏移量，垂直方向的偏移量      
+        */
+        body{
+            background-color:red;
+            background-image: url('/Exercise/图片/背景.jpg');
+            background-repeat: no-repeat;
+            background-position: top;
+        }
+    </style>
+
 </head>
 <body>
-    
+    <div class="box1"></div>
+    <h1>dadadaddasdads</h1>
+    <p>nihao nishishiei</p>
 </body>
 </html>
