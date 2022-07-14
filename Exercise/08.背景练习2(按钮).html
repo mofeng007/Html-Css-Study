@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+          图片属于网页中的外部资源，外部资源都需要浏览器单独发送请求加载
+             浏览器加载外部资源都是按需加载的，用则加载，不用则不加载
+          像这个练习，link会首先加载，而hover和active会在指定状态触发时才会加载
+        */
+        a:link{
+            display: block;
+            width: 200px;
+            height: 100px;
+            background-image: url('/Exercise/图片/1.jpg.webp');
+        }
+
+        a:hover{
+            background-image: url('/Exercise/图片/2.jpg.webp');
+        }
+
+        a:active{
+            background-image: url('/Exercise/图片/3.jpg.webp');
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:;"></a>
+</body>
+</html>
