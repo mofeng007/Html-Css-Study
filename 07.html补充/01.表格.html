@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        在现实生活中，我们经常需要使用表格来表示一些格式化的数据，
+            课程表，人名单，成绩单...
+
+        在网页中我们也需要使用表格，我们可以通过table标签来创建一个表格  
+            -在table标签中使用 tr 表示表格中的一行，有几个 tr 就有几行
+            -在 tr 中使用 td 表示一个单元格，有几个 td 就有几个单元格  
+            -colspan 橫向合并单元格
+            -rowspan 纵向合并单元格 
+     -->
+    <table border="1" align="center">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td rowspan="2">4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td colspan="2">3</td>
+        </tr>
+    </table>
+
+    <!-- 
+        长表格：
+        
+        可以将一个表格分成三个部分
+            -thead 头部
+            -tbody 主体
+            -tfoot 底部
+
+            -th表示头部的单元格
+     -->
+     <table border="1" align="center">
+        <thead>
+            <tr>
+                <td>日期</td>
+                <td>收入</td>
+                <td>支出</td>
+                <td>合计</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2022.5.8</td>
+                <td>520</td>
+                <td>300</td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <td>2022.5.8</td>
+                <td>520</td>
+                <td>300</td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <td>2022.5.8</td>
+                <td>520</td>
+                <td>300</td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <td>2022.5.8</td>
+                <td>520</td>
+                <td>300</td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <td>2022.5.8</td>
+                <td>520</td>
+                <td>300</td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <td>2022.5.8</td>
+                <td>520</td>
+                <td>300</td>
+                <td>180</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>合计</td>
+                <td>620</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

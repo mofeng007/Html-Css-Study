@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        表单：
+           -在现实生活中，表单用于提交数据
+           -在网页中也可以使用表单，网页中的表单用于将本地的数据提交给远程的服务器
+           -使用form标签来创建一个表单
+
+        form的属性：
+            -action：表单要提交的服务器地址
+     -->
+     <form action="/Exercise/哔哩哔哩导航自我练习.html">
+        <!-- 
+            -文本框：type="text"
+            -密码框：type="password"
+            -单选按钮：type="radio" 一组单选按钮需要相同的 name 属性，
+                而且必须要指定一个value属性，value属性最终会作为用户的填写的值传递给服务器
+                checked：可以将单选按钮设置为默认选中
+            -多选框：type="checkbox"  
+            -下拉列表：select 下拉选项：option，selected：默认选中
+            -提交按钮：type="submit" value：设置按钮显示的文字
+        -->
+        文本框<input type="text" name="username"><br>
+
+        密码框<input type="password" name="password"><br>
+
+        单选按钮<input type="radio" name="11" value="a" checked>
+                <input type="radio" name="11" value="b">
+                <input type="radio" name="11" value="c"><br>
+
+        多选框<input type="checkbox" name="22" value="aa">
+        <input type="checkbox" name="22" value="bb">
+        <input type="checkbox" name="22" value="cc">
+        <input type="checkbox" name="22" value="dd"><br>
+
+        下拉列表<select name="ha" id="">
+            <option value="1">选项1</option>
+            <option value="2" selected>选项2</option>
+            <option value="3">选项3</option>
+        </select>
+        <br>
+        <br>
+        提交按钮<input type="submit" value="上传">
+     </form>
+</body>
+
+</html>

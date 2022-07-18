@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+          -border-spacing:指定边框之间的距离
+          -border-collapse：设置边框的合并（设置这个之后，border-spacing这个就没用了）
+
+          如果表格中没有使用tbody而是直接使用tr
+             那么浏览器会自动创建一个tbody，并且将tr全部放到tbody里面
+             所以，tr不是table的子元素，无法通过 table > tr: 选中tr 应该用 tbody > tr
+
+          默认情况下，元素在td中是垂直居中的 可以通过vertical-align来设置   
+        */
+        table {
+            width: 50%;
+            border: 1px solid black;
+            border-spacing: 10px;
+            border-collapse: collapse;
+        }
+
+        td {
+            height: 50px;
+            border: 1px solid black;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        /* 隔行变色 */
+       tbody > tr:nth-child(2n) {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>学号</td>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>地址</td>
+        </tr>
+        <tr>
+            <td>220</td>
+            <td>发发发</td>
+            <td>52</td>
+            <td>蒋经国</td>
+        </tr>
+        <tr>
+            <td>530</td>
+            <td>李四</td>
+            <td>98</td>
+            <td>流沙河</td>
+        </tr>
+        <tr>
+            <td>65</td>
+            <td>王五</td>
+            <td>55</td>
+            <td>天宫</td>
+        </tr>
+        <tr>
+            <td>220</td>
+            <td>发发发</td>
+            <td>52</td>
+            <td>蒋经国</td>
+        </tr>
+        <tr>
+            <td>530</td>
+            <td>李四</td>
+            <td>98</td>
+            <td>流沙河</td>
+        </tr>
+        <tr>
+            <td>65</td>
+            <td>王五</td>
+            <td>55</td>
+            <td>天宫</td>
+        </tr>
+    </table>
+</body>
+
+</html>
