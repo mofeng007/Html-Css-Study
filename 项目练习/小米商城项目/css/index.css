@@ -1,0 +1,131 @@
+/* 主页index的样式表 */
+
+/* 顶部导航条的容器 */
+.topbar-wrapper {
+    /* 设置宽度全屏 */
+    width: 100%;
+    /* 设置高度和行高，内容可以居中 */
+    height: 40px;
+    line-height: 40px;
+    /* 设置背景颜色 */
+    background-color: #333;
+}
+
+/* 设置超链接的颜色 */
+.topbar a {
+    display: block;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+
+/* 设置超链接移入的效果 */
+.topbar a:hover {
+    color: #fff;
+}
+
+/* 设置分割线 */
+.topbar .line {
+    color: #424242;
+    font-size: 12px;
+    margin: 0px 8px;
+    margin-top: -1px;
+}
+
+/* 设置左侧导航条和所有li浮动*/
+.service,
+.topbar li {
+    float: left;
+}
+
+/* 设置app鼠标移入显示下拉框 */
+.app-wrapper:hover>.app .qrcode {
+    display: block;
+}
+
+/* 给app开启相对定位，这样小三角的定位就可以相对于它定位了 */
+.app {
+    position: relative;
+}
+
+/* 设置下拉框的小三角 ,hover用来显示小三角*/
+.app-wrapper:hover>.app::after {
+    /* 隐藏小三角 */
+    /* display: none; */
+    /* 实现小三角 */
+    content: "";
+    /* 重置宽高，不然三角形大小会受到父元素影响 */
+    width: 0px;
+    height: 0px;
+    /* 开启绝对定位后，脱离文档流，变成块元素，就不用设置display了 display: block; */
+    /* 设置四个边框 */
+    border: 8px solid transparent;
+    /* 去除上边框 */
+    border-top: none;
+    /* 设置下边框颜色 */
+    border-bottom-color: #fff;
+    /* 设置绝对定位 */
+    position: absolute;
+    bottom: 0px;
+    left: 14px;
+    right: 0px;
+    z-index: 999;
+}
+
+/* 设置下载app的下拉框 */
+.app .qrcode {
+    /* 隐藏下拉框 */
+    display: none;
+    width: 124px;
+    height: 148px;
+    /* 不设置行高会发现小米商城app几个字被挤下去了，因为它是.topbar-wrapper的后代元素，
+        继承了.topbar-wrapper的40px的行高，所以被挤下去 */
+    line-height: 0px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    /* 设置绝对定位 */
+    position: absolute;
+    left: -38px;
+    z-index: 999;
+}
+
+/* 设置二维码图片样式 */
+.app .qrcode img {
+    width: 90px;
+    margin: 17px;
+    /* 让字靠上一点 */
+    margin-bottom: 15px;
+}
+
+/* 设置二维码下面的字 */
+.app .qrcode span {
+    font-size: 14px;
+    color: #000;
+}
+
+/* 设置购物车和右侧导航条 */
+.shop-car,
+.user-info {
+    float: right;
+}
+
+.shop-car {
+    margin-left: 26px;
+}
+
+/* 设置购物车的样式 */
+.shop-car a {
+    width: 120px;
+    background-color: #424242;
+    text-align: center;
+}
+
+.shop-car:hover a {
+    background-color: #fff;
+    color: #ff6700;
+}
+
+/* 设置购物车图标 */
+.shop-car i {
+    margin-right: 2px;
+}

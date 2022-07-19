@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 0px;
+            height: 0px;
+            border: 10px solid;
+            border-top: none;
+            /* 保留左右下三个边框，就可以出现一个向上的三角 */
+            border-color: transparent transparent black transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- 演示下拉框的小三角是怎么来的 -->
+    <div class="box1"></div>
+</body>
+</html>
