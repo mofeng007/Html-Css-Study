@@ -39,7 +39,7 @@
 
 /* 设置app鼠标移入显示下拉框 */
 .app-wrapper:hover>.app .qrcode {
-    display: block;
+    height: 148px;
 }
 
 /* 给app开启相对定位，这样小三角的定位就可以相对于它定位了 */
@@ -74,9 +74,11 @@
 /* 设置下载app的下拉框 */
 .app .qrcode {
     /* 隐藏下拉框 */
-    display: none;
+    /* display: none; */
     width: 124px;
-    height: 148px;
+    height: 0px;
+    overflow: hidden;
+    /* height: 148px; */
     /* 不设置行高会发现小米商城app几个字被挤下去了，因为它是.topbar-wrapper的后代元素，
         继承了.topbar-wrapper的40px的行高，所以被挤下去 */
     line-height: 0px;
@@ -86,7 +88,9 @@
     /* 设置绝对定位 */
     position: absolute;
     left: -38px;
-    z-index: 999;
+    z-index: 1000;
+    /* 过渡效果 */
+    transition: height 0.7s;
 }
 
 /* 设置二维码图片样式 */
@@ -111,6 +115,8 @@
 
 .shop-car {
     margin-left: 26px;
+    /* 开启相对定位，让购物车下拉框相对于这个来定位 */
+    position: relative;
 }
 
 /* 设置购物车的样式 */
@@ -120,6 +126,7 @@
     text-align: center;
 }
 
+/* 设置购物车鼠标移入效果 */
 .shop-car:hover a {
     background-color: #fff;
     color: #ff6700;
@@ -128,4 +135,142 @@
 /* 设置购物车图标 */
 .shop-car i {
     margin-right: 2px;
+}
+
+/* 购物车下拉框的显示 */
+.shop-car:hover a+.shop-car-message {
+    /* display: block; */
+    height: 100px;
+}
+
+/* 设置购物车下拉框 */
+.shop-car-message {
+    /* display: none; */
+    width: 280px;
+    /* 设置为0，在hover那里设置为100，这样添加一个过渡效果 */
+    height: 0px;
+    /* height: 100px; */
+    overflow: hidden;
+    line-height: 100px;
+    text-align: center;
+    background-color: #fff;
+    position: absolute;
+    left: -160px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+    /* 用于为样式添加过渡效果 */
+    transition: height 0.7s;
+    z-index: 1000;
+}
+
+/* 设置购物车下面的文字 */
+.shop-car-message span {
+    font-size: 14px;
+    color: #000;
+}
+
+/* 给header-wrapper开启定位，让下面的弹出框相对于这个来进行绝对定位 */
+.header-wrapper {
+    position: relative;
+}
+
+/* 设置中间的header*/
+.header {
+    height: 100px;
+}
+
+/* 设置logo */
+.header .logo {
+    float: left;
+    margin-top: 22px;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    /* 隐藏logo中的文字，这个文字是让搜索引擎搜索到的 */
+    text-indent: -9999px;
+}
+
+/* 设置logo里面的超链接 */
+.header .logo a {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    /* 为了过渡效果可以显示，设置一个0 */
+    left: 0%;
+    background-image: url("/项目练习/小米商城项目/img/logo1.png");
+    background-size: cover;
+    transition: left 0.3s;
+}
+
+/* 设置鼠标移入logo时显示的另一张图片 */
+.header .logo .home {
+    background-image: url("/项目练习/小米商城项目/img/logo2.png");
+}
+
+/* 设置鼠标移入logo ，图标的切换*/
+.header .logo:hover .mi {
+    left: 55px;
+}
+
+/* 设置中间导航条的容器 */
+.header .nav-wrapper {
+    float: left;
+}
+
+/* 设置导航条 */
+.header .nav {
+    /* 让他的宽度被内容撑开 ，因为下面设置了padding，导致整个框变大，
+        也可以设置宽度，但是要减去padding*/
+    /* width: 850px; */
+    height: 100px;
+    line-height: 100px;
+    padding-left: 58px;
+
+}
+
+/* 设置浮动 */
+.nav-wrapper li {
+    float: left;
+}
+
+/* 设置鼠标移入效果 */
+.nav-wrapper li a:hover {
+    color: #ff6700;
+}
+
+/* 设置nav下面的链接 */
+.nav-wrapper li a {
+    display: block;
+    font-size: 16px;
+    color: #000;
+    margin-right: 20px;
+}
+
+/* 隐藏第一个li */
+.all-goods {
+    /* 用visibility: hidden;可以隐藏并且占据页面位置，
+       display：none 也可以隐藏，但是不占据位置 */
+    visibility: hidden;
+}
+
+/* 设置nav的下拉框 */
+.nav .goods-info {
+    /* height: 228px; */
+    height: 0px;
+    width: 100%;
+    overflow: hidden;
+    background-color: red;
+    /* border-top: 1px solid rgb(224, 224, 224); */
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, .3); */
+    transition: height 1s;
+    z-index: 999;
+}
+
+/* 设置下拉框的显示 */
+.nav .showgoods:hover~.goods-info,
+.goods-info:hover {
+    height: 228px;
 }
