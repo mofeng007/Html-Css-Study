@@ -246,7 +246,7 @@
     background-color: rgba(105, 101, 101, .6);
     position: absolute;
     left: -113px;
-    z-index: 99;
+    z-index: 999;
     line-height: 0px;
 }
 
@@ -274,12 +274,12 @@ ul.left-menu li a:hover {
 }
 
 /* 设置菜单的弹出框 */
-.left-menu-info{
+.left-menu-info {
     width: 0px;
     height: 460px;
     overflow: hidden;
     background-color: red;
-    position:absolute;
+    position: absolute;
     top: 0px;
     left: 234px;
     z-index: 999;
@@ -288,7 +288,7 @@ ul.left-menu li a:hover {
 
 /* 菜单弹出框的显示 */
 ul.left-menu li:hover~.left-menu-info,
-.left-menu-info:hover{
+.left-menu-info:hover {
     width: 992px;
 }
 
@@ -384,14 +384,20 @@ ul.left-menu li:hover~.left-menu-info,
 
 /* 设置搜索框的下拉框 */
 .search-info {
-    display: none;
     width: 244px;
-    height: 250px;
+    height: 0px;
+    overflow: hidden;
     background-color: #fff;
-    outline: 1px solid #ff6700;
     position: absolute;
     top: 50px;
+    transition: height 1s;
     z-index: 999;
+}
+
+/* 实现下拉框的显示 */
+.search-wrapper .search:hover+.search-info {
+    height: 250px;
+    outline: 1px solid #ff6700;
 }
 
 
