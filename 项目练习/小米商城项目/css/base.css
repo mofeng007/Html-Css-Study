@@ -15,6 +15,7 @@ body{
 
 /* 去除a的下划线 */
 a{
+    color: #000;
     text-decoration: none;
 }
 

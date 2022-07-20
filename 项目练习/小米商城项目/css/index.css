@@ -228,9 +228,49 @@
 
 }
 
-/* 设置浮动 */
-.nav-wrapper li {
+/* 设置浮动 nav的子元素才浮动，这样不会影响第一个li下面的导航菜单*/
+.nav>li {
     float: left;
+}
+
+/* 给第一个li开启定位，让下面的菜单相对于其进行定位 */
+.all-goods-wrapper{
+    position: relative;
+}
+
+/* 设置第一个li下面的左侧导航条 */
+.left-menu{
+    width: 234px;
+    height: 420px;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    left: -118px;
+    z-index: 99;
+    line-height: 0px;
+}
+
+/* 设置菜单下面的链接 */
+ul.left-menu li a{
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    color: white;
+    padding: 0px 30px;
+    font-size: 14px;
+    margin-right: 0px;
+}
+
+/* 设置鼠标移入效果 */
+ul.left-menu li a:hover{
+    color: #fff;
+    background-color: #ff6700;
+}
+
+/* 设置菜单里的小图标 */
+.left-menu a i{
+    line-height: 42px;
+    float: right;
 }
 
 /* 设置鼠标移入效果 */
@@ -242,7 +282,6 @@
 .nav-wrapper li a {
     display: block;
     font-size: 16px;
-    color: #000;
     margin-right: 20px;
 }
 
@@ -273,4 +312,52 @@
 .nav .showgoods:hover~.goods-info,
 .goods-info:hover {
     height: 228px;
+}
+
+/* 设置搜索框容器 */
+.search-wrapper {
+    width: 296px;
+    height: 50px;
+    float: right;
+    background-color: rebeccapurple;
+    margin-top: 25px;
+}
+
+/* 设置浮动，让框和按钮直接没有空格 */
+.search-wrapper .search-inp {
+    box-sizing: border-box;
+    /* 去除边框，直接用容器的边框 */
+    border: none;
+    width: 244px;
+    float: left;
+    font-size: 16px;
+    height: 50px;
+    padding: 0 10px;
+    outline: none;
+    border: 1px solid rgb(224, 224, 224);
+}
+
+/* 设置input获取焦点后的样式 */
+.search-wrapper .search-inp:focus,
+.search-wrapper .search-inp:focus+.search-btn {
+    outline: 1px solid #ff6700;
+}
+
+.search-wrapper .search-btn {
+    float: left;
+    height: 50px;
+    width: 52px;
+    padding: 0px;
+    border: none;
+    background-color: #fff;
+    color: #616161;
+    font-size: 16px;
+    border: 1px solid rgb(224, 224, 224);
+    border-left: none;
+}
+
+.search-wrapper .search-btn:hover {
+    background-color: #ff6700;
+    color: #fff;
+    border: none;
 }
