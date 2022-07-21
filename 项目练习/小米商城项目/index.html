@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小米商城 - Xiaomi 12、Redmi K50、MIX FOLD，小米电视官方网站</title>
-    <link rel="stylesheet" href="/重置样式表/reset.css">
-    <link rel="stylesheet" href="/FontAwesome/css/all.css">
-    <link rel="stylesheet" href="/项目练习/小米商城项目/css/index.css">
+    <link rel="stylesheet" href="/项目练习/小米商城项目/css/reset.min.css">
+    <link rel="stylesheet" href="/项目练习/小米商城项目/css/all.min.css">
+    <link rel="stylesheet" href="/项目练习/小米商城项目/css/index.min.css">
     <!-- 引入公共样式表 -->
-    <link rel="stylesheet" href="/项目练习/小米商城项目/css/base.css">
+    <link rel="stylesheet" href="/项目练习/小米商城项目/css/base.min.css">
+    <!-- 设置网站图标（在标题栏和收藏栏）
+         网站图片一般都存储在网站根目录下面，名字一般都是favicon.ico     
+    -->
+    <link rel="icon" href="./favicon.ico">
 </head>
 
 <body>
@@ -162,9 +166,9 @@
                             </li>
 
                             <!-- 创建左侧菜单的弹出框 -->
-                        <div class="left-menu-info">
+                            <div class="left-menu-info">
 
-                        </div>
+                            </div>
                         </ul>
                     </li>
                     <li class="showgoods"><a href="javascript:;">小米手机</a></li>
@@ -230,6 +234,67 @@
             </div>
         </div>
     </div>
+
+    <!-- 创建右侧固定的工具条 -->
+    <div class="to-top">
+    </div>
+
+    <!-- 创建广告容器 -->
+    <div class="ad w">
+        <!-- 左侧的快捷方式 -->
+        <ul class="shortcut">
+            <li><a href="javascript:;">
+                    <i class="fas fa-clock"></i>
+                    小米秒杀
+                </a>
+            </li>
+            <li><a href="javascript:;">
+                    <i class="fas fa-building"></i>
+                    企业团购
+                </a>
+            </li>
+            <li><a href="javascript:;">
+                    <i class="fas fa-frog"></i>
+                    F码通道
+                </a>
+            </li>
+            <li><a href="javascript:;">
+                    <i class="fas fa-robot"></i>
+                    米粉卡
+                </a>
+            </li>
+            <li><a href="javascript:;">
+                    <i class="fas fa-keyboard"></i>
+                    以旧换新
+                </a>
+            </li>
+            <li><a href="javascript:;">
+                    <i class="fas fa-sim-card"></i>
+                    话费充值
+                </a>
+            </li>
+        </ul>
+
+        <!-- 广告图片 -->
+        <ul class="img-ad">
+            <li>
+                <a href="javascript:;">
+                    <img src="/项目练习/小米商城项目/img/adone.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="/项目练习/小米商城项目/img/adtwo.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="/项目练习/小米商城项目/img/adthree.jpg">
+                </a>
+            </li>
+        </ul>
+    </div>
+
 </body>
 
 </html>

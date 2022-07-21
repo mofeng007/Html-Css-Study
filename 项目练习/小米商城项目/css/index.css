@@ -468,3 +468,113 @@ ul.left-menu li:hover~.left-menu-info,
 .prev-next .prev-right:hover {
     background-position: -42px 0px;
 }
+
+/* 设置右侧工具栏 */
+.to-top{
+    width: 26px;
+    height: 206px;
+    background-color: #bfa;
+    margin-right: -639px;
+    position: fixed;
+    bottom: 60px;
+    right: 50%;   /*将right值设置为视口宽度的50% */
+    /* 
+      此处的布局等式：
+         left + margin-left + width + margin-right + right = 视口的宽度
+
+         auto + 0 + 26 + 0 + 60 = 视口宽度
+
+        auto + 0 + 26 + 0 + 50% = 视口宽度
+
+    */
+}
+
+/* 设置下方广告区域 */
+div.ad{
+    height: 170px;
+    margin-top: 14px
+}
+
+div.ad .shortcut,
+div.ad .img-ad,
+div.ad li{
+    float: left;
+}
+
+/* 设置左侧快捷方式 */
+div.ad .shortcut{
+    width: 228px;
+    height: 168px;
+    background-color: #545750;
+    margin-right: 14px;
+    /* 下面两个padding是为了显示边框线 */
+    padding-top: 2px;
+    padding-left: 6px;
+
+}
+
+div.ad .shortcut li{
+    position: relative;
+}
+
+/* 设置上边框的线 */
+div.ad .shortcut li::before{
+    content: "";
+    position: absolute;
+    width: 64px;
+    height: 1px;
+    background-color: #665e57;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    margin: 0px auto;
+}
+
+/* 设置左边框的线 */
+div.ad .shortcut li::after{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 1px;
+    background-color: #665e57;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto 0px;
+}
+
+div.ad .shortcut a{
+    display: block;
+    color: #cfccca;
+    width: 76px;
+    height: 84px;
+    font-size: 12px;
+    text-align: center;
+    /* 下面 i 的margin-top给了 a 导致溢出，可以用clearfix和这个hidden */
+    overflow: hidden;
+}
+
+div.ad .shortcut a:hover{
+    color: #fff;
+}
+
+div.ad .shortcut a i{
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+div.ad .img-ad li{
+    width: 316px;
+    margin-right: 15px;
+}
+
+/* 最后一个没有margin-right，不让图片无法排列 */
+div.ad .img-ad li:last-child{
+    margin-right: 0px;
+}
+
+div.ad .img-ad img{
+    width: 100%;
+    vertical-align: top;
+}
