@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            perspective: 800px;
+        }
+
+        body{
+            perspective: 800px;
+            border: 1px solid red;
+            background-color: silver;
+        }
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            margin: 200px auto;
+            transition: 2s;
+        }
+
+        /* 
+          通过旋转可以使元素沿着X,Y,Z轴旋转指定的角度
+              -rotateX
+              -rotateY
+              -rotateZ
+        */
+
+        body:hover .box1{
+            transform: rotateY(100deg);
+            /* 是否显示元素的背面 */
+            /* backface-visibility: hidden; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

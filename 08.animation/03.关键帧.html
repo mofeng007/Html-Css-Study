@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            height: 500px;
+            border-bottom: 10px solid black;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        .outer div {
+            width: 100px;
+            height: 100px;
+            float: left;
+            border-radius: 50%;
+            background-color: aquamarine;
+            animation: ball 1s forwards ease-in infinite alternate;
+        }
+
+        div.box2{
+            background-color: aqua;
+            animation-delay: 0.1s;
+        }
+
+        div.box3{
+            background-color: red;
+            animation-delay: 0.2s;
+        }
+
+        div.box4{
+            background-color: black;
+            animation-delay: 0.3s;
+        }
+
+        div.box5{
+            background-color: blueviolet;
+            animation-delay: 0.4s;
+        }
+
+        div.box6{
+            background-color: greenyellow;
+            animation-delay: 0.5s;
+        }
+
+        div.box7{
+            background-color: yellowgreen;
+            animation-delay: 0.6s;
+        }
+
+        div.box8{
+            background-color: orange;
+            animation-delay: 0.7s;
+        }
+
+        div.box9{
+            background-color: rgb(15, 239, 239);
+            animation-delay: 0.8s;
+        }
+
+        /* 创建小球下落动画 */
+        @keyframes ball{
+            from{
+                margin-top: 0px;
+            }
+
+            to{
+                margin-top: 400px;
+            }
+
+            /* 20%,60%,to{
+                margin-top: 400px;
+                animation-timing-function: ease-in;
+            }
+
+            40%{
+                margin-top: 100px;
+            }
+
+            80%{
+                margin-top: 200px;
+            } */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+        <div class="box8"></div>
+        <div class="box9"></div>
+    </div>
+</body>
+
+</html>
