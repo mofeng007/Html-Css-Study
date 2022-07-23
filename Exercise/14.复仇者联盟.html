@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            perspective: 800px;
+        }
+
+        body {
+            perspective: 800px;
+        }
+
+        .cube {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            transform: rotateX(45deg) rotateZ(45deg);
+            animation: rotate 10s infinite linear;
+        }
+
+        .cube>div {
+            width: 200px;
+            height: 200px;
+            opacity: 0.7;
+            position: absolute;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .box1 {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .box2 {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .box3 {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .box4 {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        .box5 {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+
+        .box6 {
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        @keyframes rotate{
+            from{
+                transform: rotateX(0) rotateZ(0);
+            }
+
+            to{
+                transform: rotateX(1turn) rotateZ(1turn);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 创建一个外部的容器 -->
+    <div class="cube">
+        <!-- 引入图片 -->
+        <div class="box1">
+            <img src="./图片/复仇者联盟/奇异博士.png">
+        </div>
+
+        <div class="box2">
+            <img src="./图片/复仇者联盟/绿巨人.png">
+        </div>
+
+        <div class="box3">
+            <img src="./图片/复仇者联盟/美队.png">
+        </div>
+
+        <div class="box4">
+            <img src="./图片/复仇者联盟/蜘蛛侠.png">
+        </div>
+
+        <div class="box5">
+            <img src="./图片/复仇者联盟/钢铁侠.png">
+        </div>
+
+        <div class="box6">
+            <img src="./图片/复仇者联盟/雷神.png">
+        </div>
+    </div>
+</body>
+
+</html>

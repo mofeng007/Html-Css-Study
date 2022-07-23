@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>钟表</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* 设置表盘的样式 */
+        .clock {
+            width: 500px;
+            height: 500px;
+            margin: 0px auto;
+            margin-top: 100px;
+            border-radius: 50%;
+            border: 10px solid black;
+            position: relative;
+            background-image: url("./图片/clock.png");
+            background-size: cover;
+        }
+
+        /* 表盘下面的都居中 */
+        .clock>div {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            right: 0px;
+            left: 0px;
+            margin: auto;
+        }
+
+        /* 设置时针容器 */
+        .hour-wrapper {
+            height: 55%;
+            width: 55%;
+            animation: run 43200s linear infinite;
+        }
+
+        /* 设置时针 */
+        .hour {
+            height: 50%;
+            width: 6px;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+        /* 设置分针容器 */
+        .min-wrapper {
+            height: 75%;
+            width: 75%;
+            animation: run 3600s steps(60) infinite;
+        }
+
+        /* 设置分针 */
+        .min {
+            height: 50%;
+            width: 4px;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+        /* 设置秒针容器 */
+        .sec-wrapper {
+            height: 85%;
+            width: 85%;
+            animation: run 60s steps(60) infinite;
+        }
+
+        /* 设置秒针 */
+        .sec {
+            height: 50%;
+            width: 2px;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+
+        @keyframes run {
+            from {
+                transform: rotateZ(0);
+            }
+
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 创建表的容器 -->
+    <div class="clock">
+
+        <!-- 创建时针的容器 -->
+        <div class="hour-wrapper">
+            <!-- 创建时针 -->
+            <div class="hour"></div>
+        </div>
+
+        <!-- 创建分针的容器 -->
+        <div class="min-wrapper">
+            <!-- 创建分针 -->
+            <div class="min"></div>
+        </div>
+
+        <!-- 创建秒针的容器 -->
+        <div class="sec-wrapper">
+            <!-- 创建秒针 -->
+            <div class="sec"></div>
+        </div>
+    </div>
+</body>
+
+</html>
