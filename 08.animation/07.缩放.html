@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            transition: 2s;
+            margin: 100px auto;
+        }
+        
+        /* 
+          对元素进行缩放的函数：
+              scaleX：水平方向缩放
+              scaleY：竖直方向缩放
+              scale：双方向缩放
+
+          transform-origin:
+           变形的原点，默认值center    
+        */
+
+        .box1:hover{
+            transform: scale(2);
+        }
+
+        .img-wrapper{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            transition: 2s;
+            overflow: hidden;
+        }
+
+        img:hover{
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="img-wrapper">
+        <img src="/Exercise/图片/复仇者联盟/蜘蛛侠.png" 100%>
+    </div>
+</body>
+</html>

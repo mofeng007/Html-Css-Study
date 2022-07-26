@@ -1,0 +1,13 @@
+div {
+  width: 100px;
+  color: #bfa;
+}
+div span {
+  height: 100px;
+}
+div ~ ul {
+  background-color: aqua;
+}
+body {
+  perspective: 800px;
+}
