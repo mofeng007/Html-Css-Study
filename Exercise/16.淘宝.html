@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/重置样式表/reset.css">
+    <style>
+        /* 设置外部容器 */
+        .nav{
+            width: 100%;
+        }
+
+        /* 设置每一行的容器 */
+        .nav-inner{
+            /* 设置为弹性容器 */
+            display: flex;
+            /* 设置主轴上空白的分布 */
+            justify-content: space-around;
+        }
+
+        .item{
+            width: 18%;
+            /* background-color: aquamarine; */
+            /* 根据屏幕大小变化而变化，自适应 */
+            /* flex: auto; */
+            text-align: center;
+        }
+
+        .item img{
+            /* 设置图片宽度 */
+            width: 100%;
+        }
+
+        .item a{
+            color: #333;
+            font-size: 16px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 创建外部容器 -->
+    <div class="nav">
+        <div class="nav-inner">
+            <div class="item">
+                <a href="javascript:;">
+                    <img src="./图片/淘宝/1.webp">
+                    <span>天猫</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="javascript:;">
+                    <img src="./图片/淘宝/2.webp">
+                    <span>吃</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="javascript:;">
+                    <img src="./图片/淘宝/3.webp">
+                    <span>聚划算</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="javascript:;">
+                    <img src="./图片/淘宝/4.webp">
+                    <span>红包</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="javascript:;">
+                    <img src="./图片/淘宝/5.webp">
+                    <span>天猫国际</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="nav-inner">
+            <div class="item">
+                <a href="javascript:;">
+                    <img src="./图片/淘宝/6.webp">
+                    <span>金币</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="javascript:;">
+                    <img src="./图片/淘宝/7.webp">
+                    <span>飞猪旅行</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="javascript:;">
+                    <img src="./图片/淘宝/8.webp">
+                    <span>捡漏</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="javascript:;">
+                    <img src="./图片/淘宝/9.webp">
+                    <span>真快</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="javascript:;">
+                    <img src="./图片/淘宝/10.webp">
+                    <span>更多</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

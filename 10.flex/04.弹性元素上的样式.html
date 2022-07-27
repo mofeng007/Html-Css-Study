@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+             -flex-grow: 弹性元素的增长系数
+
+             -flex-shrink: 弹性元素的缩减系数
+                 -缩减系数的计算方式比较复杂
+                 -缩减多少是根据缩减系数和元素大小来计算
+
+             - flex-basis: 指定的是元素在主轴上的基础长度   
+                   -如果主轴是横向的，则该值指定的就是元素的宽度
+                   -如果主轴是纵向的，则该值指定的就是元素的高度
+                   -默认值是auto 表示参考元素自身的高度或宽度
+                   -如果传递了一个具体的数值，则以该值为准
+
+             -flex 可以设置弹性元素的所有的三个样式  
+                 flex：增长 缩减 基础；   
+                    -initial "flex:0 1 auto"
+                    -auto "flex:1 1 auto"
+                    -none "flex:0 0 auto" 弹性元素不缩减（没有弹性）
+
+             -order 绝对弹性元素的排列方式（类似层级）       
+        */
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        ul {
+            width: 800px;
+            border: 10px red solid;
+            display: flex;
+            flex: initial;
+        }
+
+        li {
+            width: 200px;
+            height: 100px;
+            background-color: #bfa;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+
+        }
+
+        li:nth-child(1) {
+            flex-grow: 0;
+        }
+
+        li:nth-child(2) {
+            background-color: blueviolet;
+            flex-grow: 2;
+        }
+
+        li:nth-child(3) {
+            background-color: yellowgreen;
+            flex-grow: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+
+</html>
