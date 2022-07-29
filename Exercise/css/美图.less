@@ -1,0 +1,154 @@
+a {
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+        color: rgb(197, 196, 196);
+    }
+}
+
+.top-bar-wrapper{
+    background-color: #000;
+}
+// 顶部导航条
+.top-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 48px;
+    padding: 0 14px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// 左侧导航条
+.left-menu {
+    &:active {
+        .nav {
+            display: block;
+        }
+    }
+
+    // 设置菜单
+    .nav {
+        display: none;
+        position: absolute;
+        top: 48px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        background-color: #000;
+        padding: 60px;
+
+        li {
+            width: 80%;
+            margin: 0 auto;
+            border-bottom: 1px solid #4e4e4e;
+
+            a {
+                display: block;
+                line-height: 44px;
+                font-size: 14px;
+
+            }
+
+            &:last-child a {
+                display: inline-block;
+            }
+
+            span {
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+    }
+
+    // 图标
+    .menu-icon {
+        width: 10px;
+        height: 48px;
+        position: relative;
+
+        li {
+            position: absolute;
+            width: 18px;
+            height: 1px;
+            background-color: #fff;
+            // 修改变形原点
+            transform-origin: left center;
+            transition: 0.5s;
+        }
+
+        li:nth-child(1) {
+            top: 18px;
+        }
+
+        li:nth-child(2) {
+            top: 24px;
+        }
+
+        li:nth-child(3) {
+            top: 30px;
+        }
+
+        // 鼠标移入变形
+        &:active {
+            li:nth-child(1) {
+                // 向下旋转
+                transform: rotateZ(40deg);
+            }
+
+            li:nth-child(2) {
+                opacity: 0;
+            }
+
+            li:nth-child(3) {
+                transform: rotateZ(-40deg);
+            }
+        }
+    }
+}
+
+// 设置媒体查询
+@media only screen {
+
+    // 断点 768px
+    @media (min-width:768px) {
+        .left-menu {
+            order: 2;
+            // 显示菜单
+            flex: auto;
+            .nav{
+                display: flex;
+                position: static;
+                padding: 0;
+                justify-content: space-around;
+                li{
+                    width: auto;
+                    border-bottom: none;
+
+                    a{
+                        line-height: 48px;
+                    }
+
+                    span{
+                        display: none;
+                    }
+                }
+            }
+            // 隐藏菜单图标
+            .menu-icon{
+                display: none;
+            }
+        }
+
+        .logo {
+            order: 1;
+        }
+
+        .user-info {
+            order: 3;
+        }
+    }
+}
