@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    /*
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
+      结构伪类：
+        :root
+            - 根元素
+        :empty
+            - 空元素
+        :first-child
+            - 第一个子元素
+        :first-of-type
+            - 同类型中的第一个子元素
+        :last-child
+            - 最后一个子元素
+        :last-of-type
+            - 同类型中的最后一个子元素
+        :nth-child
+            - 第n个子元素
+        :nth-of-type
+            - 同类型中第n个子元素
+        :nth-last-child
+            - 倒数第n个元素
+        :nth-last-of-type
+            - 同类型中倒数第n个元素
+        :only-child
+            - 唯一的子元素
+        :only-of-type
+            - 同类型中唯一的子元素
+
+     */
+
+    .box1, .box2{
+        width: 100px;
+        height: 100px;
+        border: 2px solid red;
+    }
+
+    div:empty{
+        background: yellow;
+    }
+
+    /*li:first-child{
+        color: tomato;
+    }*/
+
+    /*li:first-of-type{*/
+    /*    color: deepskyblue;*/
+    /*}*/
+
+    /*n表示从0开始的整数*/
+    /*li:nth-child(2n){*/
+    /*    color: orange;*/
+    /*}*/
+
+    /*
+        even 表示偶数，相当于2n
+        odd 表示奇数，相当于2n+1
+    */
+    li:nth-child(odd){
+        color: orange;
+    }
+
+    /*li:nth-last-child(2){*/
+    /*    color: tomato;*/
+    /*}*/
+
+    /*li:only-child{*/
+    /*    color: blue;*/
+    /*}*/
+
+    /*li:only-of-type{*/
+    /*    color: blue;*/
+    /*}*/
+  </style>
+</head>
+<body>
+<span>我是小span</span>
+<li>我是body里的li</li>
+
+<div class="box1">box1</div>
+<hr>
+<div class="box2"></div>
+<hr>
+<ul>
+    <li>第一个li</li>
+    <li>第二个li</li>
+    <li>第三个li</li>
+    <li>第四个li</li>
+    <li>第五个li</li>
+</ul>
+
+<ul>
+    <li>我是我爹唯一的儿子</li>
+</ul>
+
+
+</body>
+</html>
